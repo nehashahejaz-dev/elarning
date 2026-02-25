@@ -1,0 +1,63 @@
+﻿@model mypro.Models.Quiz
+
+@{
+    ViewData["Title"] = "Add Quiz";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    /* Navbar se overlap rokne ke liye wrapper */
+    .main-wrapper {
+        padding-top: 80px; /* Navbar height ke hisab se adjustment */
+        min-height: 100vh;
+        background-color: #f8f9fa;
+    }
+</style>
+
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 d-none d-md-block"></div>
+
+            <div class="col-md-6 mx-auto py-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header bg-success text-white text-center py-3">
+                        <h5 class="mb-0 fw-bold"><i class="fas fa-edit me-2"></i> Create New Quiz</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <form asp-action="addquiz" method="post">
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-muted small text-uppercase">Select Course</label>
+                                <select asp-for="CourseId" class="form-select border-2 shadow-sm" asp-items="ViewBag.CourseList">
+                                    <option value="">-- Choose Course --</option>
+                                </select>
+                                <span asp-validation-for="CourseId" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-muted small text-uppercase">Quiz Title</label>
+                                <input asp-for="Title" class="form-control border-2 shadow-sm" placeholder="e.g. Midterm Quiz" />
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-muted small text-uppercase">Passing Score</label>
+                                <input asp-for="PassingScore" type="number" class="form-control border-2 shadow-sm" placeholder="Minimum marks to pass" />
+                                <span asp-validation-for="PassingScore" class="text-danger"></span>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-success btn-lg fw-bold shadow">
+                                    <i class="fas fa-save me-1"></i> Save Quiz & Add Questions
+                                </button>
+                                <a asp-action="quizlist" class="btn btn-light border py-2 text-muted">
+                                    Cancel
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

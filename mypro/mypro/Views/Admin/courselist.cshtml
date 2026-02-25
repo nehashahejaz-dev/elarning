@@ -1,0 +1,92 @@
+﻿@model IEnumerable<mypro.Models.Course>
+
+@{
+    ViewData["Title"] = "Course List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 d-none d-md-block"></div>
+
+        <div class="col-md-10 mx-auto min-vh-100 py-5">
+            <div class="card shadow-sm border-0 mt-4">
+                <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 fw-bold text-primary"><i class="fas fa-book me-2"></i> Course Management</h5>
+                    <a asp-action="Addcourse" class="btn btn-primary btn-sm">
+                        <i class="fas fa-plus me-1"></i> Add New Course
+                    </a>
+                </div>
+
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle text-center mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width: 5%">#</th>
+                                    <th style="width: 10%">Thumbnail</th>
+                                    <th style="width: 20%">Course Name</th>
+                                    <th style="width: 15%">Category</th>
+                                    <th style="width: 15%">Instructor (Teacher)</th>
+                                    <th style="width: 10%">Price</th>
+                                    <th style="width: 25%">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    var i = 1;
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@i</td>
+                                            <td>
+                                                @if (!string.IsNullOrEmpty(item.ThumbnailUrl))
+                                                {
+                                                    <img src="@item.ThumbnailUrl" class="img-thumbnail" style="width: 60px; height: 40px; object-fit: cover;" alt="Course Image" />
+                                                }
+                                                else
+                                                {
+                                                    <div class="bg-light text-muted small" style="width: 60px; height: 40px; line-height: 40px; border: 1px solid #ddd;">No Pic</div>
+                                                }
+                                            </td>
+                                            <td class="fw-bold text-dark">@item.Title</td>
+                                            <td>
+                                                <span class="badge rounded-pill bg-info text-dark">@item.Category?.CategoryName</span>
+                                            </td>
+                                            <td class="text-muted">
+                                                <i class="fas fa-chalkboard-teacher me-1"></i> @item.Instructor?.FullName
+                                            </td>
+                                            <td class="fw-bold">
+                                                @(item.Price == 0 || item.Price == null ? "Free" : "$" + item.Price)
+                                            </td>
+                                            <td>
+                                                <a asp-action="Editcourse" asp-route-id="@item.CourseId" class="btn btn-outline-warning btn-sm">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                
+                                                <a asp-action="Deletecourse" asp-route-id="@item.CourseId" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are you sure?')">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        i++;
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="7" class="py-5 text-muted text-center">
+                                            <i class="fas fa-folder-open fa-3x mb-3 d-block"></i>
+                                            No courses found. <a asp-action="Addcourse">Create your first course!</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

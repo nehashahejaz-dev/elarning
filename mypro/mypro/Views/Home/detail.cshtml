@@ -1,0 +1,169 @@
+﻿@model mypro.Models.Course
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="course-hero d-flex align-items-center bg-dark py-5" style="background: linear-gradient(45deg, #1a1a1a, #2c3e50);">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item"><a href="@Url.Action("course")" class="text-white-50 text-decoration-none">Courses</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-white-50 text-decoration-none">@Model.Category?.CategoryName</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">@Model.Title</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="unbounded display-4 fw-bold text-white mb-3 animate__animated animate__fadeInLeft">
+                    @Model.Title
+                </h1>
+                <p class="lead text-white-50 mb-4 animate__animated animate__fadeInLeft">
+                    @Model.Description
+                </p>
+
+                <div class="d-flex flex-wrap gap-4 mb-4 text-white animate__animated animate__fadeInUp">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-star-fill text-warning me-2"></i>
+                        <span class="fw-bold me-1">4.8</span>
+                        <span class="text-white-50">(Rating)</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-people-fill me-2 text-white-50"></i>
+                        <span>@Model.Enrollments.Count students enrolled</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-patch-check-fill me-2 text-white-50"></i>
+                        <span>@Model.Category?.CategoryName</span>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-4 animate__animated animate__fadeInUp">
+                    <img src="~/images/default-avatar.png" alt="Instructor" class="rounded-circle me-3 border border-2 border-white" style="width: 50px; height: 50px; object-fit: cover;">
+                    <div>
+                        <p class="mb-0 text-white-50 small">Created by</p>
+                        <p class="mb-0 text-white fw-bold">@(Model.Instructor?.FullName ?? "Expert Instructor")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card mb-5 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h3 class="fw-bold mb-4">What you'll learn</h3>
+                    <div class="row g-3">
+                        @* Yahan aap description ke points dikha sakte hain, filhal static hain *@
+                        <div class="col-md-6">
+                            <div class="d-flex"><i class="bi bi-check-lg text-success me-3 fs-5"></i>
+                                <span>Mastery in @Model.Category?.CategoryName</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex"><i class="bi bi-check-lg text-success me-3 fs-5"></i>
+                                <span>Hands-on projects and assignments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <h3 class="fw-bold mb-4">Course Content</h3>
+                <div class="d-flex justify-content-between mb-3 text-muted small">
+                    <span>@Model.Sections.Count Sections • Lectures • Full Lifetime Access</span>
+                </div>
+
+                <div class="accordion" id="courseAccordion">
+                    @if (Model.Sections.Any())
+                    {
+                        int count = 0;
+                        @foreach (var sec in Model.Sections)
+                        {
+                            <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold bg-white collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#sec_@sec.SectionId">
+                                        @(sec.Title)
+                                    </button>
+                                </h2>
+                                <div id="sec_@sec.SectionId" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                                    <div class="accordion-body bg-light">
+                                        <p class="small text-muted">Aap is section mein @(sec.Title) ke baare mein mazeed tafseel se seekhenge.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-muted">No sections added yet.</p>
+                    }
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <h3 class="fw-bold mb-4">Instructor</h3>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold text-primary mb-1">@(Model.Instructor?.FullName)</h5>
+                        <p class="text-muted small mb-3">Professional Instructor</p>
+                        <div class="d-flex align-items-start">
+                            <img src="~/images/default-avatar.png" class="rounded-circle me-4 border-3 border-white shadow-sm" style="width: 100px; height: 100px; object-fit: cover;">
+                            <div>
+                                <p class="text-muted">@Model.Instructor?.Email</p>
+                                <p class="text-muted small">Specialized in @Model.Category?.CategoryName and related technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="sidebar-container sticky-top" style="top: 100px; z-index: 900;">
+                <div class="card border-0 shadow-lg overflow-hidden animate__animated animate__fadeInRight">
+                    <div class="position-relative">
+                        <img src="@(string.IsNullOrEmpty(Model.ThumbnailUrl) ? "/images/placeholder.jpg" : Model.ThumbnailUrl)" class="card-img-top" style="height: 220px; object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-25">
+                            <button class="btn btn-light rounded-circle shadow-lg" style="width: 60px; height: 60px;">
+                                <i class="bi bi-play-fill fs-3 text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            @if (Model.Price == 0)
+                            {
+                                <h2 class="fw-bold mb-0 text-success">FREE</h2>
+                            }
+                            else
+                            {
+                                <h2 class="fw-bold mb-0 text-dark">Rs. @Model.Price</h2>
+                                <span class="text-muted text-decoration-line-through ms-2">Rs. @(Model.Price + 2000)</span>
+                            }
+                        </div>
+
+                        <a href="@Url.Action("Enroll", "Enrollment", new { id = Model.CourseId })" class="btn btn-primary w-100 btn-lg mb-3 rounded-pill fw-bold shadow">
+                            Enroll Now
+                        </a>
+                        
+                        <p class="text-center small text-muted mb-4">30-Day Money-Back Guarantee</p>
+
+                        <h6 class="fw-bold mb-3">This course includes:</h6>
+                        <ul class="list-unstyled mb-0 text-muted small">
+                            <li class="mb-2"><i class="bi bi-camera-video me-2"></i> On-demand video content</li>
+                            <li class="mb-2"><i class="bi bi-infinity me-2"></i> Full lifetime access</li>
+                            <li class="mb-2"><i class="bi bi-phone me-2"></i> Access on mobile and TV</li>
+                            <li class="mb-2"><i class="bi bi-trophy me-2"></i> Certificate of completion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

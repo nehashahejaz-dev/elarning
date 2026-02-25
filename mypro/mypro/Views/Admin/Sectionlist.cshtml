@@ -1,0 +1,73 @@
+﻿@model IEnumerable<mypro.Models.Section>
+
+@{
+    ViewData["Title"] = "Section List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 d-none d-md-block"></div>
+
+        <div class="col-md-10 mx-auto min-vh-100 py-5">
+            <div class="card shadow-sm border-0 mt-4">
+                <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 fw-bold text-dark"><i class="fas fa-layer-group me-2 text-primary"></i> Course Sections</h5>
+                    <a asp-action="addsection" class="btn btn-primary btn-sm">
+                        <i class="fas fa-plus me-1"></i> Add New Section
+                    </a>
+                </div>
+
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle text-center mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width: 5%">Order</th>
+                                    <th style="width: 35%">Section Title</th>
+                                    <th style="width: 30%">Belongs to Course</th>
+                                    <th style="width: 10%">Lessons</th>
+                                    <th style="width: 20%">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <span class="badge bg-light text-dark border">@(item.SortOrder ?? 0)</span>
+                                            </td>
+                                            <td class="fw-bold">@item.Title</td>
+                                            <td>
+                                                <span class="text-primary">@item.Course?.Title</span>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-secondary">@item.Lessons.Count</span>
+                                            </td>
+                                            <td>
+                                                <a asp-action="EditSection" asp-route-id="@item.SectionId" class="btn btn-outline-warning btn-sm">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                <a asp-action="Deletesection" asp-route-id="@item.SectionId" class="btn btn-outline-danger btn-sm" onclick="return confirm('Deleting this section will also delete its lessons. Continue?')">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="5" class="py-5 text-muted">No sections found.</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

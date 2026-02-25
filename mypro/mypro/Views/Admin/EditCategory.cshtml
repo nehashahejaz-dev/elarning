@@ -1,0 +1,45 @@
+﻿@model mypro.Models.Category
+@{
+    ViewData["Title"] = "EditCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container vh-100">
+    <div class="row h-100 align-items-center justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white text-center py-3">
+                    <h4 class="mb-0"><i class="fas fa-clipboard-list"></i> Edit  CATEGORY</h4>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="EditCategory">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        <input type="hidden" asp-for="CategoryId" />
+                        <div class="form-group mb-4">
+                            <label asp-for="CategoryName" class="form-label fw-bold">Category Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-users"></i></span>
+                                <input asp-for="CategoryName" class="form-control" placeholder="  category" />
+
+                            </div>
+                            <span asp-validation-for="CategoryName" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-save me-1"></i> Edit Category
+                            </button>
+                            <a asp-action="categorylist" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-1"></i> Back to List
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center text-muted small">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

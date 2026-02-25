@@ -1,0 +1,73 @@
+﻿@model mypro.Models.Question
+@{
+    ViewData["Title"] = "Add Question";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .main-wrapper {
+        padding-top: 80px; /* Navbar ki height ke mutabiq isay kam ya zyada kar sakti hain */
+        min-height: 100vh;
+        background-color: #f8f9fa; /* Light grey background for professional look */
+    }
+</style>
+
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 d-none d-md-block"></div>
+
+            <div class="col-md-8 mx-auto py-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header bg-success text-white py-3">
+                        <h5 class="mb-0 fw-bold">
+                            <i class="fas fa-plus-circle me-2"></i>Add Question to: @ViewBag.QuizTitle
+                        </h5>
+                    </div>
+
+                    <div class="card-body p-4">
+                        <form asp-action="AddQuestion" method="post">
+                            <input type="hidden" asp-for="QuizId" value="@ViewBag.QuizId" />
+
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-muted small text-uppercase">Question Description</label>
+                                <textarea asp-for="QuestionText" class="form-control border-2 shadow-sm" rows="3" placeholder="Type your question here..."></textarea>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-muted small text-uppercase mb-3">Options</label>
+                                @for (int i = 0; i < 4; i++)
+                                {
+                                    <div class="input-group mb-3 shadow-sm">
+                                        <div class="input-group-text bg-light border-2">
+                                            <input class="form-check-input mt-0" type="radio" name="CorrectOptionIndex" value="@i" required>
+                                        </div>
+                                        <input type="text" name="OptionTexts" class="form-control border-2" placeholder="Option @(i + 1)" required>
+                                    </div>
+                                }
+                            </div>
+
+                            <div class="row align-items-center">
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label fw-bold text-muted small text-uppercase">Points</label>
+                                    <input asp-for="Points" type="number" class="form-control border-2" value="1" />
+                                </div>
+                                <div class="col-md-8 mb-3 pt-3">
+                                    <button type="submit" class="btn btn-success w-100 fw-bold py-2 shadow">
+                                        <i class="fas fa-save me-1"></i> Save & Add Another
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="text-center mt-4">
+                            <a asp-action="quizlist" class="btn btn-link text-decoration-none text-muted">
+                                <i class="fas fa-arrow-left me-1"></i> Finish and Back to Quiz List
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+﻿@model mypro.Models.Course
+
+@{
+    ViewData["Title"] = "Create Course";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container min-vh-100 pt-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 mt-4">
+                <div class="card-header bg-success text-white text-center py-3">
+                    <h4 class="mb-0"><i class="fas fa-book-open me-2"></i> Create New Course</h4>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="AddCourse" method="post" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <label asp-for="Title" class="form-label fw-bold">Course Title</label>
+                                <input asp-for="Title" class="form-control" placeholder="e.g. Advanced C# Programming" />
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <label asp-for="Price" class="form-label fw-bold">Price ($)</label>
+                                <input asp-for="Price" class="form-control" type="number" step="0.01" />
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label fw-bold">Category</label>
+                                <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.CategoryList">
+                                    <option value="">-- Select Category --</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-12 mb-4">
+                                <label class="form-label fw-bold">Assign Instructor (Teachers Only)</label>
+                                <select asp-for="InstructorId" class="form-select" asp-items="ViewBag.InstructorList">
+                                    <option value="">-- Select Teacher --</option>
+                                </select>
+                                <span asp-validation-for="InstructorId" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-12 mb-4">
+                                <label class="form-label fw-bold">Course Thumbnail</label>
+                                <div class="input-group">
+                                    <input type="file" name="courseImage" class="form-control" accept="image/*" />
+                                    <span class="input-group-text"><i class="fas fa-image"></i></span>
+                                </div>
+                                <small class="text-muted">Recommended size: 800x450px</small>
+                            </div>
+
+                            <div class="col-md-12 mb-4">
+                                <label asp-for="Description" class="form-label fw-bold">Description</label>
+                                <textarea asp-for="Description" class="form-control" rows="4" placeholder="Enter course details..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="fas fa-save me-1"></i> Launch Course
+                            </button>
+                            <a asp-action="Courselist" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-1"></i> Back to Courses
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

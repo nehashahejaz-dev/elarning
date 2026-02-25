@@ -1,0 +1,93 @@
+﻿@model IEnumerable<mypro.Models.Lesson>
+
+@{
+    ViewData["Title"] = "Lesson List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 d-none d-md-block"></div>
+
+        <div class="card-body col-md-9 mx-auto min-vh-100 py-5">
+
+            <div class="d-flex justify-content-between align-items-center mb-4 mt-5">
+                <h4 class="fw-bold"><i class="fas fa-play-circle me-2 text-primary"></i> Manage Lessons</h4>
+                <a asp-action="addlesson" class="btn btn-primary shadow-sm">
+                    <i class="fas fa-plus me-1"></i> Add New Lesson
+                </a>
+            </div>
+
+            <table class="table table-hover align-middle text-center shadow-sm border">
+                <thead class="table-light">
+                    <tr>
+                        <th style="width: 5%">#</th>
+                        <th style="width: 20%">Lesson Title</th>
+                        <th style="width: 20%">Section</th>
+                        <th style="width: 20%">Course</th>
+                        <th style="width: 10%">Type</th>
+                        <th style="width: 20%">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        var i = 1;
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <span class="badge bg-secondary">@i</span>
+                                </td>
+                                <td class="fw-semibold text-start px-3">
+                                    @item.Title
+                                </td>
+                                <td>
+                                    <span class="text-muted">@item.Section?.Title</span>
+                                </td>
+                                <td>
+                                    <span class="badge rounded-pill bg-info text-dark">
+                                        @item.Section?.Course?.Title
+                                    </span>
+                                </td>
+                                <td>
+                                    @if (item.IsFree == true)
+                                    {
+                                        <span class="text-success fw-bold"><i class="fas fa-unlock me-1"></i> Free</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger fw-bold"><i class="fas fa-lock me-1"></i> Paid</span>
+                                    }
+                                </td>
+                                <td>
+                                    <a asp-action="Editlesson" asp-route-id="@item.LessonId"
+                                       class="btn btn-outline-warning btn-sm me-1 shadow-sm">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+
+                                    <a asp-action="Deletelesson" asp-route-id="@item.LessonId"
+                                       class="btn btn-outline-danger btn-sm shadow-sm"
+                                       onclick="return confirm('Are you sure you want to delete this Lesson?')">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            i++;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-muted py-5 text-center">
+                                <i class="fas fa-info-circle fa-2x mb-3 d-block"></i>
+                                No lessons available. Click "Add New Lesson" to get started.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

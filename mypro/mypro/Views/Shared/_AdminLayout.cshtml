@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | Able Pro Dashboard Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <link rel="icon" href="~/assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="~/assets/fonts/inter/inter.css" id="main-font-link" />
+    <link rel="stylesheet" href="~/assets/fonts/tabler-icons.min.css">
+    <link rel="stylesheet" href="~/assets/fonts/feather.css">
+    <link rel="stylesheet" href="~/assets/fonts/fontawesome.css">
+    <link rel="stylesheet" href="~/assets/fonts/material.css">
+    <link rel="stylesheet" href="~/assets/css/style.css" id="main-style-link">
+    <link rel="stylesheet" href="~/assets/css/style-preset.css">
+
+    <style>
+        /* Navbar overlap fix */
+        .pc-container {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme="light">
+
+    <nav class="pc-sidebar">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+                <a href="/" class="b-brand text-primary">
+                    <img src="~/assets/images/logo-dark.svg" class="img-fluid logo-lg" alt="logo">
+                    <span class="badge bg-light-success rounded-pill ms-2 theme-version">v9.0</span>
+                </a>
+            </div>
+            <div class="navbar-content">
+                <div class="card pc-user-card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <img src="~/assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
+                            </div>
+                            <div class="flex-grow-1 ms-3 me-2">
+                                <h6 class="mb-0">@User.Identity.Name</h6>
+                                <small class="text-muted">
+                                    @(User.IsInRole("Admin") ? "Administrator" : "Teacher")
+                                </small>
+                            </div>
+                            <a class="btn btn-icon btn-link-secondary avtar" data-bs-toggle="collapse" href="#pc_sidebar_userlink">
+                                <i class="ti ti-chevron-down"></i>
+                            </a>
+                        </div>
+                        <div class="collapse pc-user-links" id="pc_sidebar_userlink">
+                            <div class="pt-3">
+                                <a href="#!"><i class="ti ti-user"></i> <span>My Account</span></a>
+                                <a asp-controller="Account" asp-action="Logout"><i class="ti ti-power"></i> <span>Logout</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="pc-navbar">
+                    <li class="pc-item pc-caption"><label>Navigation</label></li>
+                    <li class="pc-item">
+                        <a  asp-action="index" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-dashboard"></i></span>
+                            <span class="pc-mtext">Dashboard</span>
+                        </a>
+                    </li>
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="pc-item pc-caption"><label>System Settings</label></li>
+                        <li class="pc-item pc-hasmenu">
+                            <a href="#!" class="pc-link">
+                                <span class="pc-micon"><i class="ti ti-shield-lock"></i></span>
+                                <span class="pc-mtext">Roles</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                            </a>
+                            <ul class="pc-submenu">
+                                <li class="pc-item"><a class="pc-link" asp-action="AddRole">Add Role</a></li>
+                                <li class="pc-item"><a class="pc-link" asp-action="Rolelist">Show Roles</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="pc-item pc-hasmenu">
+                            <a href="#!" class="pc-link">
+                                <span class="pc-micon"><i class="ti ti-users"></i></span>
+                                <span class="pc-mtext">User Management</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                            </a>
+                            <ul class="pc-submenu">
+                                <li class="pc-item"><a class="pc-link" asp-action="teacherregister">Add User</a></li>
+                                <li class="pc-item"><a class="pc-link" asp-action="Userlist">Show Users</a></li>
+                            </ul>
+                        </li>
+                    }
+
+                    <li class="pc-item pc-caption"><label>E-Learning</label></li>
+
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-category"></i></span>
+                            <span class="pc-mtext">Categories</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" asp-action="AddCategory">Add Category</a></li>
+                            <li class="pc-item"><a class="pc-link" asp-action="CategoryList">Show Categories</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-book"></i></span>
+                            <span class="pc-mtext">Courses</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" asp-action="Addcourse">Add Course</a></li>
+                            <li class="pc-item"><a class="pc-link" asp-action="courselist">Show Courses</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-layout-list"></i></span>
+                            <span class="pc-mtext">Sections</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" asp-action="Addsection">Add Section</a></li>
+                            <li class="pc-item"><a class="pc-link" asp-action="sectionlist">Show Sections</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-video"></i></span>
+                            <span class="pc-mtext">Lessons</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" asp-action="Addlesson">Add Lesson</a></li>
+                            <li class="pc-item"><a class="pc-link" asp-action="lessonlist">Show Lessons</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-clipboard-check"></i></span>
+                            <span class="pc-mtext">Quizzes</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" asp-action="addquiz">Add Quiz</a></li>
+                            <li class="pc-item"><a class="pc-link" asp-action="quizlist">Show Quizzes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pc-header">
+        <div class="header-wrapper">
+            <div class="me-auto pc-mob-drp">
+                <ul class="list-unstyled">
+                    <li class="pc-h-item pc-sidebar-collapse">
+                        <a href="#" class="pc-head-link ms-0" id="sidebar-hide"><i class="ti ti-menu-2"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ms-auto">
+                <ul class="list-unstyled">
+                    <li class="dropdown pc-h-item">
+                        <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"><i class="ti ti-sun"></i></a>
+                        <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
+                            <a href="#!" class="dropdown-item" onclick="layout_change('dark')"><span>Dark</span></a>
+                            <a href="#!" class="dropdown-item" onclick="layout_change('light')"><span>Light</span></a>
+                        </div>
+                    </li>
+                    <li class="dropdown pc-h-item header-user-profile">
+                        <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#">
+                            <img src="~/assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar" />
+                        </a>
+                        <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
+                            <div class="dropdown-header">
+                                <h5>@User.Identity.Name</h5>
+                            </div>
+                            <div class="dropdown-body">
+                                <a asp-controller="Account" asp-action="Logout" class="dropdown-item">
+                                    <i class="ti ti-power"></i> <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="pc-container">
+        <div class="pc-content">
+            @RenderBody()
+        </div>
+    </div>
+
+    <script src="~/assets/js/plugins/popper.min.js"></script>
+    <script src="~/assets/js/plugins/simplebar.min.js"></script>
+    <script src="~/assets/js/plugins/bootstrap.min.js"></script>
+    <script src="~/assets/js/fonts/custom-font.js"></script>
+    <script src="~/assets/js/pcoded.js"></script>
+    <script src="~/assets/js/plugins/feather.min.js"></script>
+</body>
+</html>

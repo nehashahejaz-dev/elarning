@@ -1,0 +1,68 @@
+﻿@model mypro.Models.Course
+
+@{
+    ViewData["Title"] = "Edit Course";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow border-0">
+                <div class="card-header bg-warning text-dark py-3">
+                    <h4 class="mb-0"><i class="fas fa-edit me-2"></i> Edit Course: @Model.Title</h4>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Editcourse" method="post" enctype="multipart/form-data">
+                        <input type="hidden" asp-for="CourseId" />
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label asp-for="Title" class="form-label fw-bold"></label>
+                                <input asp-for="Title" class="form-control" />
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Category</label>
+                                <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.CategoryList"></select>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Instructor</label>
+                                <select asp-for="InstructorId" class="form-select" asp-items="ViewBag.InstructorList"></select>
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-bold d-block">Current Thumbnail</label>
+                                @if (!string.IsNullOrEmpty(Model.ThumbnailUrl))
+                                {
+                                    <img src="@Model.ThumbnailUrl" class="img-thumbnail mb-2" style="height: 100px;" />
+                                }
+                                <input type="file" name="courseImage" class="form-control" accept="image/*" />
+                                <small class="text-muted">Leave blank to keep the current image.</small>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Price" class="form-label fw-bold"></label>
+                                <input asp-for="Price" class="form-control" />
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <label asp-for="Description" class="form-label fw-bold"></label>
+                                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-warning fw-bold">Update Course</button>
+                            <a asp-action="Courselist" class="btn btn-light">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

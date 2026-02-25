@@ -1,0 +1,791 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\mypro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\home\\course.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\home\\course.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\home\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\home\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\wwwroot\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\wwwroot\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\studentattempt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\studentattempt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\userprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\userprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\addcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\addcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\addcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\addcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\addlesson.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\addlesson.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\addquestion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\addquestion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\addquiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\addquiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\addsection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\addsection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\addrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\addrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\teacherregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\teacherregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\editlesson.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\editlesson.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\categorylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\categorylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\quizdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\quizdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\quizlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\quizlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\eleraningcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\eleraningcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\section.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\section.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\lessonlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\lessonlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\courselist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\courselist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\editcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\editcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\sectionlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\sectionlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\editsection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\editsection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\rolelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\rolelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\editrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\editrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\editcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\editcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\home\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\home\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|c:\\users\\lenovo\\desktop\\mypro\\mypro\\views\\admin\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{944EFBD6-D301-2F75-FCA0-7D463767079B}|mypro\\mypro.csproj|solutionrelative:mypro\\views\\admin\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "course.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\course.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Home\\course.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\course.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Home\\course.cshtml",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAAHoAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-20T09:47:42.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\detail.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Home\\detail.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\detail.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Home\\detail.cshtml",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAgwKgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-13T11:44:50.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "mypro\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "mypro\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAAMYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T09:29:28.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAAE0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T14:05:41.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAIgAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-11T07:59:34.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\User.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\User.cs",
+              "RelativeToolTip": "mypro\\Models\\User.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T09:15:25.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Category.cs",
+              "RelativeToolTip": "mypro\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T16:28:39.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enrollment.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Enrollment.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\Enrollment.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Enrollment.cs",
+              "RelativeToolTip": "mypro\\Models\\Enrollment.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T15:23:04.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\Course.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Course.cs",
+              "RelativeToolTip": "mypro\\Models\\Course.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAA8wC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T19:11:11.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Userlist.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Userlist.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\Userlist.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Userlist.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\Userlist.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAADgvx4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T09:40:26.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "mypro\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "mypro\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAQwJAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T08:39:57.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\wwwroot\\style.css",
+              "RelativeDocumentMoniker": "mypro\\wwwroot\\style.css",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\wwwroot\\style.css",
+              "RelativeToolTip": "mypro\\wwwroot\\style.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-13T10:45:06.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserProgress.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\UserProgress.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\UserProgress.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\UserProgress.cs",
+              "RelativeToolTip": "mypro\\Models\\UserProgress.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T19:12:00.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAgwCcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-03T08:49:15.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StudentAttempt.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\StudentAttempt.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\StudentAttempt.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\StudentAttempt.cs",
+              "RelativeToolTip": "mypro\\Models\\StudentAttempt.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA8wBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T08:53:42.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\AddCategory.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\AddCategory.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\AddCategory.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\AddCategory.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAApwB4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T16:34:14.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAACIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-03T08:44:22.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AddQuestion.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\AddQuestion.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\AddQuestion.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\AddQuestion.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\AddQuestion.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAADQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T10:15:28.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-03T08:59:55.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AddCourse.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\AddCourse.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\AddCourse.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\AddCourse.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\AddCourse.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAApwD0AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T19:28:09.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Addlesson.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Addlesson.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\Addlesson.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Addlesson.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\Addlesson.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAC8AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T08:14:27.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "addquiz.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\addquiz.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\addquiz.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\addquiz.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\addquiz.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAgwDwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T10:13:45.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AddSection.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\AddSection.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\AddSection.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\AddSection.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\AddSection.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAApwCsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T07:11:06.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AddRole.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\AddRole.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\AddRole.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\AddRole.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\AddRole.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAApwB0AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T09:15:48.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "teacherregister.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\teacherregister.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\teacherregister.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\teacherregister.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\teacherregister.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAEQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T09:15:16.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Editlesson.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Editlesson.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\Editlesson.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Editlesson.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\Editlesson.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T08:20:30.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Categorylist.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Categorylist.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\Categorylist.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Categorylist.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\Categorylist.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T16:40:04.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "QuizDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\QuizDetails.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\QuizDetails.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\QuizDetails.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\QuizDetails.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwEoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T11:31:46.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "quizlist.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\quizlist.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\quizlist.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\quizlist.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\quizlist.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T11:27:27.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Quiz.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Quiz.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\Quiz.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Quiz.cs",
+              "RelativeToolTip": "mypro\\Models\\Quiz.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA8wA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T08:54:15.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Question.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Question.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\Question.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Question.cs",
+              "RelativeToolTip": "mypro\\Models\\Question.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA8wBEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T08:54:12.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Lesson.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Lesson.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\Lesson.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Lesson.cs",
+              "RelativeToolTip": "mypro\\Models\\Lesson.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA8wBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T19:57:07.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Option.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Option.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\Option.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Option.cs",
+              "RelativeToolTip": "mypro\\Models\\Option.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T08:53:35.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Section.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Section.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\Section.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Section.cs",
+              "RelativeToolTip": "mypro\\Models\\Section.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA8wBEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T19:12:06.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "EleraningContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\EleraningContext.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\EleraningContext.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\EleraningContext.cs",
+              "RelativeToolTip": "mypro\\Models\\EleraningContext.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAgwFUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T09:29:03.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "lessonlist.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\lessonlist.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\lessonlist.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\lessonlist.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\lessonlist.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwDYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T08:10:37.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "courselist.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\courselist.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\courselist.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\courselist.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\courselist.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T19:33:35.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Editcourse.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Editcourse.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\Editcourse.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Editcourse.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\Editcourse.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T19:45:00.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Sectionlist.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Sectionlist.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\Sectionlist.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Sectionlist.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\Sectionlist.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T07:13:28.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "EditSection.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\EditSection.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\EditSection.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\EditSection.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\EditSection.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T07:17:47.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Rolelist.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Rolelist.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\Rolelist.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\Rolelist.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\Rolelist.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-03T10:16:05.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "mypro\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Models\\Role.cs",
+              "RelativeToolTip": "mypro\\Models\\Role.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T10:07:49.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "EditRole.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\EditRole.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\EditRole.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\EditRole.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\EditRole.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-03T10:41:00.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "EditCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\EditCategory.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\EditCategory.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\EditCategory.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\EditCategory.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T16:43:39.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\Register.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Home\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\Register.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Home\\Register.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAgwDcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T15:24:48.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T15:07:53.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Program.cs",
+              "RelativeDocumentMoniker": "mypro\\Program.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Program.cs",
+              "RelativeToolTip": "mypro\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwBEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T14:55:21.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "EditUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\EditUser.cshtml",
+              "RelativeDocumentMoniker": "mypro\\Views\\Admin\\EditUser.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\Views\\Admin\\EditUser.cshtml",
+              "RelativeToolTip": "mypro\\Views\\Admin\\EditUser.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwD0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-09T10:54:05.292Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

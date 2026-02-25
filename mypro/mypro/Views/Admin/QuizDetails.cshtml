@@ -1,0 +1,79 @@
+﻿@model mypro.Models.Quiz
+
+@{
+    ViewData["Title"] = "Quiz Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid py-5">
+    <div class="row">
+        <div class="col-md-2 d-none d-md-block"></div>
+        <div class="col-md-9 mx-auto">
+
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body bg-dark text-white rounded">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h3 class="fw-bold mb-1">@Model.Title</h3>
+                            <p class="mb-0 opacity-75">Course: @Model.Course?.Title | Passing Score: @Model.PassingScore</p>
+                        </div>
+                        <div>
+                            <a asp-action="AddQuestion" asp-route-quizId="@Model.QuizId" class="btn btn-light btn-sm">
+                                <i class="fas fa-plus me-1"></i> Add More Questions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="fw-bold mb-3"><i class="fas fa-list-ol me-2 text-primary"></i> Questions (@Model.Questions.Count)</h5>
+
+            <div class="accordion shadow-sm" id="quizAccordion">
+                @if (Model.Questions != null && Model.Questions.Any())
+                {
+                    int count = 1;
+                    foreach (var q in Model.Questions)
+                    {
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading@q.QuestionId">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse@q.QuestionId">
+                                    Q @count: @q.QuestionText
+                                    <span class="ms-auto badge bg-primary me-3">@q.Points pts</span>
+                                </button>
+                            </h2>
+                            <div id="collapse@q.QuestionId" class="accordion-collapse collapse" data-bs-parent="#quizAccordion">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        @foreach (var opt in q.Options)
+                                        {
+                                            <li class="list-group-item d-flex justify-content-between align-items-center @(opt.IsCorrect == true ? "list-group-item-success" : "")">
+                                                @opt.OptionText
+                                                @if (opt.IsCorrect == true)
+                                                {
+                                                    <span class="badge bg-success"><i class="fas fa-check"></i> Correct Answer</span>
+                                                }
+                                            </li>
+                                        }
+                                    </ul>
+                                    <div class="mt-3 text-end">
+                                        <a href="#" class="btn btn-outline-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i> Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        count++;
+                    }
+                }
+                else
+                {
+                    <div class="alert alert-warning">No questions added yet.</div>
+                }
+            </div>
+
+            <div class="mt-4">
+                <a asp-action="quiilist" class="btn btn-secondary px-4">Back to Quiz List</a>
+            </div>
+        </div>
+    </div>
+</div>

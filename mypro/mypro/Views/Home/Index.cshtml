@@ -1,0 +1,231 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+ <!-- Hero Section (ORIGINAL SLIDER with MODERN SEARCH) -->
+    <section id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="hero-slide" style="background-image: url('images/slider.png');">
+                    <div class="hero-overlay"></div>
+                    <div class="container h-100 d-flex align-items-center justify-content-center">
+                        <div class="hero-content text-center animate__animated animate__zoomIn">
+                            <h1 class="unbounded display-3 fw-bold mb-4 text-white">Unlock Your Potential</h1>
+                            <p class="lead text-white mb-5 opacity-75">Apni skills ko upgrade karein expert instructors
+                                ke sath.</p>
+
+                            <!-- Embedded Modern Search Bar -->
+                            <div class="hero-search-input-group mx-auto" style="max-width: 700px;">
+                                <i class="bi bi-search text-white-50 ps-3 fs-5"></i>
+                                <input type="text" class="hero-search-input"
+                                    placeholder="What do you want to learn today?">
+                                <button class="hero-search-btn">Search</button>
+                            </div>
+
+                            <div class="mt-4 text-white-50">
+                                <small>Popular: <span class="text-white">Web Development</span>, <span
+                                        class="text-white">Python</span>, <span class="text-white">Graphic
+                                        Design</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 (Optional) -->
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: url('images/slider.png');">
+                    <div class="hero-overlay"></div>
+                    <div class="container h-100 d-flex align-items-center justify-content-center">
+                        <div class="hero-content text-center">
+                            <h1 class="unbounded display-3 fw-bold mb-4 text-white">Learn From Experts</h1>
+                            <p class="lead text-white mb-5 opacity-75">Lifetime access to high-quality courses.</p>
+                            <div class="hero-search-input-group mx-auto" style="max-width: 700px;">
+                                <i class="bi bi-search text-white-50 ps-3 fs-5"></i>
+                                <input type="text" class="hero-search-input" placeholder="Find your next course...">
+                                <button class="hero-search-btn">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+    <!-- 2. Category Sliders (Directly Below Slider) -->
+    <section class="container py-5" style="margin-top: -50px; position: relative; z-index: 10;">
+        <div class="bg-white p-4 rounded-4 shadow-lg">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <h3 class="unbounded fw-bold m-0">Top Categories</h3>
+                <a asp-action="course" class="text-decoration-none text-theme-light fw-bold">View All <i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="row g-3 justify-content-center">
+              @foreach (var cat in ViewBag.Categories)
+    {
+        <div class="col-6 col-md-4 col-lg-2">
+                    <a href="@Url.Action("course", "home", new { categoryId = cat.CategoryId })" class="text-decoration-none  text-dark">
+                        <div class="category-item text-center p-3 border-0 bg-light transition-hover rounded-3">
+                            <div class="category-icon fs-2 text-primary">
+                                <i class="bi bi-tag "></i>
+                            </div>
+                            <h6 class="fw-bold m-0 mt-2">@cat.CategoryName</h6>
+                        </div>
+                    </a>
+        </div>
+    }
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Featured Courses Grid -->
+    <section class="container py-5">
+        <h2 class="unbounded fw-bold mb-2 text-center">Featured Courses</h2>
+        <p class="text-center text-muted mb-5">Hand-picked by our experts for your career growth.</p>
+
+    <div class="row g-4">
+        @foreach (var course in ViewBag.Courses)
+        {
+            <div class="col-md-6 col-lg-3">
+                <div class="course-card-modern">
+                    <div class="course-thumb-wrapper">
+                        <img src="@(string.IsNullOrEmpty(course.ThumbnailUrl) ? "/images/default-course.jpg" : course.ThumbnailUrl)"
+                             class="course-thumb" alt="@course.Title">
+
+                        @if (course.Price == 0)
+                        {
+                            <span class="course-badge bg-success">Free</span>
+                        }
+                        else
+                        {
+                            <span class="course-badge">Best Seller</span>
+                        }
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">@course.Title</h3>
+                        <p class="instructor-info text-muted small">
+                            <i class="bi bi-person-fill"></i> @course.Instructor?.FullName
+                        </p>
+
+                        <div class="rating-wrapper d-flex align-items-center">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-half text-warning"></i>
+                            <span class="rating-count">(4.5)</span>
+                        </div>
+
+                        <hr class="my-3 opacity-25">
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="price-wrapper">
+                                <span class="current-price">$@course.Price</span>
+                                @if (course.Price > 0)
+                                {
+                                    <span class="original-price text-decoration-line-through small text-muted">$@(course.Price + 20)</span>
+                                }
+                            </div>
+                            <a href="@Url.Action("Detail", "home", new { id = course.CourseId })"
+                               class="btn btn-sm btn-outline-primary rounded-circle border-0 bg-light-subtle"
+                               style="min-width: 40px; padding: 0;">
+                                <i class="bi bi-eye fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+        <div class="text-center mt-5">
+        <a asp-action="course" class="btn btn-primary btn-lg rounded-pill px-5 text-white">
+            Explore All
+                Courses</a>
+        </div>
+    </section>
+
+    <!-- 4. Why Choose Us -->
+    <section class="py-5" style="background-color: var(--theme-cream);">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-infinity"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Lifetime Access</h4>
+                        <p class="text-muted">Aik bar kharido, hamesha ke liye. Learn at your own pace, anytime,
+                            anywhere.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Expert Instructors</h4>
+                        <p class="text-muted">Industry ke mahireen se seekhein. Learn from the best minds in the field.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Certification</h4>
+                        <p class="text-muted">Course khatam karne par certificate. Showcase your skills with official
+                            recognition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Student Testimonials -->
+    <section class="container py-5">
+        <h2 class="unbounded fw-bold text-center mb-5">Student Success Stories</h2>
+        <div class="row g-4">
+           @foreach (var student in ViewBag.TopStudents)
+{
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm p-4 h-100 position-relative overflow-hidden">
+            <div class="position-absolute top-0 end-0 bg-warning p-2 px-3 fw-bold shadow-sm" style="border-bottom-left-radius: 20px;">
+                <i class="bi bi-trophy-fill me-1"></i> Top Learner
+            </div>
+
+            <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold fs-3 shadow" style="width: 70px; height: 70px;">
+                        @student.FullName.Substring(0, 1)
+                    </div>
+                </div>
+                <div class="ms-4">
+                    <h4 class="fw-bold m-0 text-dark">@student.FullName</h4>
+                    <p class="text-muted mb-0">
+                        <i class="bi bi-check-circle-fill text-success me-1"></i> 
+                        Passed @student.TotalPassed Quizzes
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-3 bg-light p-3 rounded-3 d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="text-muted small d-block">Overall Score</span>
+                    <span class="h4 fw-bold mb-0 text-primary">@student.TotalScore</span>
+                </div>
+                <i class="bi bi-award-fill fs-1 text-warning opacity-50"></i>
+            </div>
+        </div>
+    </div>
+}
+        </div>
+    </section>

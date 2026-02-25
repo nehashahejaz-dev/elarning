@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "EditSection";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model mypro.Models.Section
+
+@{
+    ViewData["Title"] = "Edit Section";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-header bg-warning py-3 text-center">
+                    <h5 class="mb-0 fw-bold"><i class="fas fa-edit me-2"></i> Edit Section</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="EditSection" method="post">
+                        <input type="hidden" asp-for="SectionId" />
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Belongs to Course</label>
+                            <select asp-for="CourseId" class="form-select" asp-items="ViewBag.CourseList"></select>
+                            <span asp-validation-for="CourseId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Title" class="form-label fw-bold">Section Title</label>
+                            <input asp-for="Title" class="form-control" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="SortOrder" class="form-label fw-bold">Display Order</label>
+                            <input asp-for="SortOrder" type="number" class="form-control" />
+                            <small class="text-muted">Change number to reorder sections in the course.</small>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-warning fw-bold">
+                                <i class="fas fa-save me-1"></i> Update Section
+                            </button>
+                            <a asp-action="Sectionlist" class="btn btn-light border">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

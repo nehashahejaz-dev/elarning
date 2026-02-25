@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card bg-primary text-white shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="ti ti-users fs-1 mb-2"></i>
+                <h6>Total Students</h6>
+                <h3>@ViewBag.StudentCount</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-success text-white shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="ti ti-book fs-1 mb-2"></i>
+                <h6>Total Courses</h6>
+                <h3>@ViewBag.CourseCount</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-warning text-white shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="ti ti-clipboard-check fs-1 mb-2"></i>
+                <h6>Total Quizzes</h6>
+                <h3>@ViewBag.QuizCount</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-danger text-white shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="ti ti-school fs-1 mb-2"></i>
+                <h6>Total Teachers</h6>
+                <h3>@ViewBag.TeacherCount</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white">
+                <h5><i class="ti ti-chart-bar me-2 text-primary"></i>Course Enrollment Analytics</h5>
+                <small class="text-muted">Total students per course</small>
+            </div>
+            <div class="card-body">
+                <div id="courseEnrollmentChart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // C# se data arrays mein convert kar ke JS mein lana
+        var labels = @Html.Raw(Json.Serialize(ViewBag.ChartLabels));
+        var dataValues = @Html.Raw(Json.Serialize(ViewBag.ChartData));
+
+        var options = {
+            series: [{
+                name: 'Students',
+                data: dataValues
+            }],
+            chart: {
+                type: 'bar',
+                height: 350,
+                toolbar: { show: false }
+            },
+            plotOptions: {
+                bar: {
+                    borderRadius: 4,
+                    horizontal: false,
+                    columnWidth: '45%',
+                    distributed: true // Har bar ko alag color dene ke liye
+                }
+            },
+            dataLabels: { enabled: false },
+            colors: ['#4680ff', '#2ca87f', '#e58a00', '#dc2626', '#673ab7', '#3f51b5'],
+            xaxis: {
+                categories: labels,
+                labels: { style: { fontSize: '12px' } }
+            },
+            yaxis: { title: { text: 'Number of Students' } },
+            legend: { show: false }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#courseEnrollmentChart"), options);
+        chart.render();
+    });
+</script>

@@ -1,0 +1,164 @@
+﻿@model IEnumerable<mypro.Models.Course>
+@{
+    ViewData["Title"] = "Courses";
+}
+<br /> <br /><<br />
+<div class="container pb-5 mt-4">
+    <form asp-action="course" method="get" id="filterForm">
+        <div class="row">
+            <div class="col-lg-3 mb-4">
+                <div class="filter-sidebar sticky-top" style="top: 100px; z-index: 900; background: #f8f9fa; padding: 20px; border-radius: 15px; border: 1px solid #eee;">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="fw-bold text-dark"><i class="bi bi-funnel me-2 text-primary"></i>Filters</div>
+                        <a href="@Url.Action("course")" class="text-danger small text-decoration-none fw-semibold">Reset All</a>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="small fw-bold mb-2 text-muted">SEARCH BY NAME</label>
+                        <div class="input-group shadow-sm">
+                            <input type="text" name="searchTerm" class="form-control border-end-0" placeholder="Type here..." value="@Context.Request.Query["searchTerm"]" style="font-size: 0.9rem;">
+                            <button class="btn btn-white border border-start-0 text-primary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="small fw-bold mb-2 text-muted">CATEGORY</label>
+                        <select name="categoryId" class="form-select shadow-sm" onchange="this.form.submit()" style="font-size: 0.9rem; cursor: pointer;">
+                            <option value="">All Categories</option>
+                            @foreach (var cat in ViewBag.Categories)
+                            {
+                                <option value="@cat.CategoryId" selected="@(ViewBag.SelectedCat == cat.CategoryId)">@cat.CategoryName</option>
+                            }
+                        </select>
+                    </div>
+
+                    <hr class="opacity-25">
+
+                    <div class="filter-group">
+                        <h6 class="small fw-bold text-muted mb-3 text-uppercase">Price Range</h6>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="priceType" id="p1" value="" onchange="this.form.submit()" @(string.IsNullOrEmpty(ViewBag.SelectedPrice) ? "checked" : "")>
+                            <label class="form-check-label small text-dark" for="p1">Show All</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="priceType" id="p2" value="Free" onchange="this.form.submit()" @(ViewBag.SelectedPrice == "Free" ? "checked" : "")>
+                            <label class="form-check-label small text-dark" for="p2">Free Courses</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="priceType" id="p3" value="Paid" onchange="this.form.submit()" @(ViewBag.SelectedPrice == "Paid" ? "checked" : "")>
+                            <label class="form-check-label small text-dark" for="p3">Premium (Paid)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-4 bg-white p-3 rounded shadow-sm border-start border-4 border-primary">
+                    <div>
+                        <h4 class="unbounded fw-bold mb-0" style="letter-spacing: -1px;color:#6F4E37">Explore Courses</h4>
+                        <p class="text-muted small mb-0">We found <span class="text-primary fw-bold">@Model.Count()</span> courses for you</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    @if (!Model.Any())
+                    {
+                        <div class="col-12 text-center py-5">
+                            <div class="mb-3">
+                                <i class="bi bi-search text-muted opacity-25" style="font-size: 5rem;"></i>
+                            </div>
+                            <h5 class="text-muted">No courses found matching your filters.</h5>
+                            <a href="@Url.Action("course")" class="btn btn-primary btn-sm mt-2 rounded-pill px-4">Browse All Courses</a>
+                        </div>
+                    }
+                    else
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-md-6 col-xl-4 animate__animated animate__fadeInUp">
+                                <div class="course-card-modern shadow-sm h-100 bg-white rounded-4 overflow-hidden position-relative border-0 transition-hover">
+                                    <div class="course-thumb-wrapper position-relative">
+                                        <img src="@(string.IsNullOrEmpty(item.ThumbnailUrl) ? "/images/placeholder.jpg" : item.ThumbnailUrl)"
+                                             class="w-100" style="height: 180px; object-fit: cover;" alt="@item.Title">
+
+                                        <div class="position-absolute top-0 start-0 m-3">
+                                            @if (item.Price == 0)
+                                            {
+                                                <span class="badge bg-success shadow-sm px-3 py-2 rounded-pill">FREE</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-warning text-dark shadow-sm px-3 py-2 rounded-pill fw-bold">PREMIUM</span>
+                                            }
+                                        </div>
+                                    </div>
+
+                                    <div class="course-content p-3">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="badge bg-light current-price text-uppercase" style="font-size: 10px;">@item.Category?.CategoryName</span>
+                                        </div>
+
+                                        <h6 class="fw-bold text-dark mb-3 line-clamp-2" style="min-height: 45px; line-height: 1.4;">@item.Title</h6>
+
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="avatar-sm bg-primary-soft rounded-circle p-1 me-2 d-flex align-items-center justify-content-center" style="width: 30px; height: 30px; background: #eef2ff;">
+                                                <i class="bi bi-person current-price" style="font-size: 14px;"></i>
+                                            </div>
+                                            <span class="text-muted" style="font-size: 13px;">@(item.Instructor?.FullName ?? "Instructor")</span>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light">
+                                            <div class="price-box">
+                                                @if (item.Price == 0)
+                                                {
+                                                    <span class="h5 fw-bold text-success mb-0">Free</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="h5 fw-bold text-dark mb-0">Rs. @string.Format("{0:N0}", item.Price)</span>
+                                                }
+                                            </div>
+                                            <a href="@Url.Action("Detail", "home", new { id = item.CourseId })" class="btn  rounded-circle shadow-sm d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; background-color:#3E2B1F">
+                                                <i class="bi bi-arrow-right text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<style>
+    /* Hover effects for a professional look */
+    .transition-hover {
+        transition: all 0.3s ease;
+    }
+
+        .transition-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+    .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .btn-primary {
+        background-color: #0d6efd; /* Aapki site ka main blue color */
+        border: none;
+    }
+
+    .text-primary {
+        color: #0d6efd !important;
+    }
+</style>
