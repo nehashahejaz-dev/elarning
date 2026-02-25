@@ -1,0 +1,129 @@
+create database eleraning 
+use eleraning
+-- 1. ROLES TABLE (Admin, Instructor, Student)
+CREATE TABLE Roles (
+    RoleId INT PRIMARY KEY IDENTITY(1,1),
+    RoleName NVARCHAR(50) NOT NULL
+);
+
+-- 2. USERS TABLE
+CREATE TABLE Users (
+    UserId INT PRIMARY KEY IDENTITY(1,1),
+    FullName NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) UNIQUE NOT NULL,
+    PasswordHash NVARCHAR(MAX) NOT NULL,
+    RoleId INT NOT NULL,
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (RoleId) REFERENCES Roles(RoleId)
+);
+
+-- 3. CATEGORIES TABLE
+CREATE TABLE Categories (
+    CategoryId INT PRIMARY KEY IDENTITY(1,1),
+    CategoryName NVARCHAR(100) NOT NULL
+);
+
+-- 4. COURSES TABLE
+CREATE TABLE Courses (
+    CourseId INT PRIMARY KEY IDENTITY(1,1),
+    Title NVARCHAR(200) NOT NULL,
+    Description NVARCHAR(MAX),
+    Price DECIMAL(18,2) DEFAULT 0.00,
+    ThumbnailUrl NVARCHAR(500),
+    InstructorId INT NOT NULL,
+    CategoryId INT NOT NULL,
+    FOREIGN KEY (InstructorId) REFERENCES Users(UserId),
+    FOREIGN KEY (CategoryId) REFERENCES Categories(CategoryId)
+);
+
+-- 5. SECTIONS TABLE (Modules)
+CREATE TABLE Sections (
+    SectionId INT PRIMARY KEY IDENTITY(1,1),
+    CourseId INT NOT NULL,
+    Title NVARCHAR(200) NOT NULL,
+    SortOrder INT DEFAULT 0,
+    FOREIGN KEY (CourseId) REFERENCES Courses(CourseId) ON DELETE CASCADE
+);
+
+-- 6. LESSONS TABLE (Videos/Articles)
+CREATE TABLE Lessons (
+    LessonId INT PRIMARY KEY IDENTITY(1,1),
+    SectionId INT NOT NULL,
+    Title NVARCHAR(200) NOT NULL,
+    ContentUrl NVARCHAR(500), 
+    Duration TIME,
+    IsFree BIT DEFAULT 0,
+    FOREIGN KEY (SectionId) REFERENCES Sections(SectionId) ON DELETE CASCADE
+);
+
+-- 7. ENROLLMENTS TABLE (Purchases)
+CREATE TABLE Enrollments (
+    EnrollmentId INT PRIMARY KEY IDENTITY(1,1),
+    UserId INT NOT NULL,
+    CourseId INT NOT NULL,
+    EnrollDate DATETIME DEFAULT GETDATE(),
+    Status NVARCHAR(20) DEFAULT 'Active', -- Active, Completed
+    FOREIGN KEY (UserId) REFERENCES Users(UserId),
+    FOREIGN KEY (CourseId) REFERENCES Courses(CourseId)
+);
+
+-- 8. USER PROGRESS TABLE
+CREATE TABLE UserProgress (
+    ProgressId INT PRIMARY KEY IDENTITY(1,1),
+    EnrollmentId INT NOT NULL,
+    LessonId INT NOT NULL,
+    IsCompleted BIT DEFAULT 0,
+    CompletedDate DATETIME,
+    FOREIGN KEY (EnrollmentId) REFERENCES Enrollments(EnrollmentId),
+    FOREIGN KEY (LessonId) REFERENCES Lessons(LessonId)
+);
+
+-- 9. QUIZZES TABLE
+CREATE TABLE Quizzes (
+    QuizId INT PRIMARY KEY IDENTITY(1,1),
+    CourseId INT NOT NULL,
+    Title NVARCHAR(200),
+    PassingScore INT DEFAULT 50,
+    FOREIGN KEY (CourseId) REFERENCES Courses(CourseId) ON DELETE CASCADE
+);
+
+-- 10. QUESTIONS TABLE
+CREATE TABLE Questions (
+    QuestionId INT PRIMARY KEY IDENTITY(1,1),
+    QuizId INT NOT NULL,
+    QuestionText NVARCHAR(MAX) NOT NULL,
+    Points INT DEFAULT 1,
+    FOREIGN KEY (QuizId) REFERENCES Quizzes(QuizId) ON DELETE CASCADE
+);
+
+-- 11. OPTIONS TABLE
+CREATE TABLE Options (
+    OptionId INT PRIMARY KEY IDENTITY(1,1),
+    QuestionId INT NOT NULL,
+    OptionText NVARCHAR(MAX) NOT NULL,
+    IsCorrect BIT DEFAULT 0,
+    FOREIGN KEY (QuestionId) REFERENCES Questions(QuestionId) ON DELETE CASCADE
+);
+
+-- 12. STUDENT ATTEMPTS (Grading)
+CREATE TABLE StudentAttempts (
+    AttemptId INT PRIMARY KEY IDENTITY(1,1),
+    UserId INT NOT NULL,
+    QuizId INT NOT NULL,
+    ScoreObtained INT,
+    IsPassed BIT,
+    AttemptDate DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (UserId) REFERENCES Users(UserId),
+    FOREIGN KEY (QuizId) REFERENCES Quizzes(QuizId)
+);
+
+-- 13. CERTIFICATES TABLE
+CREATE TABLE Certificates (
+    CertificateId INT PRIMARY KEY IDENTITY(1,1),
+    UserId INT NOT NULL,
+    CourseId INT NOT NULL,
+    CertificateCode AS ('CERT-' + CAST(CertificateId AS NVARCHAR(10))), -- Auto-generated code
+    IssuedDate DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (UserId) REFERENCES Users(UserId),
+    FOREIGN KEY (CourseId) REFERENCES Courses(CourseId)
+);
