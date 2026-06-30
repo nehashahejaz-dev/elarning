@@ -29,7 +29,8 @@ namespace mypro.Controllers
             var topStudents = db.StudentAttempts
          .Include(sa => sa.User) // User ka naam lene ke liye
          .GroupBy(sa => new { sa.UserId, sa.User.FullName }) // Student wise group karna
-         .Select(group => new {
+         .Select(group => new
+         {
              FullName = group.Key.FullName,
              TotalScore = group.Sum(sa => sa.ScoreObtained ?? 0), // Total marks ka sum
              TotalPassed = group.Count(sa => sa.IsPassed == true) // Kitne quizzes pass kiye
@@ -41,7 +42,7 @@ namespace mypro.Controllers
             ViewBag.TopStudents = topStudents;
             return View();
         }
-           
+
         public IActionResult Privacy()
         {
             return View();
@@ -71,8 +72,7 @@ namespace mypro.Controllers
                 new Claim(ClaimTypes.Name, user.FullName),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Role, user.Role.RoleName), // Role name yahan kaam ayega
-                new Claim("UserId", user.UserId.ToString())
-            };
+new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),            };
 
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
@@ -134,7 +134,7 @@ namespace mypro.Controllers
             }
 
             return View(user);
-        
+
 
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -193,6 +193,125 @@ namespace mypro.Controllers
          .FirstOrDefault(c => c.CourseId == id);
 
             if (course == null) return NotFound();
+            return View(course);
+        }
+        // EnrollmentController.cs
+
+        public async Task<IActionResult> Enroll(int id)
+        {
+            // ClaimTypes.NameIdentifier use karein kyunki Login mein yahi set kiya tha
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(userIdClaim))
+            {
+                return RedirectToAction("Login", "home");
+            }
+
+            int userId = int.Parse(userIdClaim);
+            var course = await db.Courses.FindAsync(id);
+
+            if (course == null) return NotFound();
+
+            // Check agar user pehle se enroll to nahi?
+            bool alreadyEnrolled = db.Enrollments.Any(e => e.CourseId == id && e.UserId == userId);
+            if (alreadyEnrolled)
+            {
+                return RedirectToAction("Watch", "home", new { id = id });
+            }
+
+            // Baaki logic...
+            if (course.Price == 0 || course.Price == null)
+            {
+                var enrollment = new Enrollment
+                {
+                    UserId = userId,
+                    CourseId = id,
+                    EnrollDate = DateTime.Now,
+                    Status = "Active"
+                };
+                db.Enrollments.Add(enrollment);
+                await db.SaveChangesAsync();
+
+                return RedirectToAction("MyCourses");
+            }
+            ViewBag.CourseId = id; // Ye zaroori hai PaymentForm ke liye
+            return View("PaymentForm");
+        }
+        public IActionResult MyCourses()
+        {
+            // Name ki jagah NameIdentifier use karein ID lene ke liye
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null) return RedirectToAction("Login", "home");
+
+            int userId = int.Parse(userIdClaim);
+
+            var myCourses = db.Enrollments
+                .Where(e => e.UserId == userId)
+                .Include(e => e.Course)
+                .Select(e => e.Course)
+                .ToList();
+
+            return View(myCourses);
+        }
+        public IActionResult PaymentForm()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> CompletePayment(int CourseId)
+        {
+            // Logged-in user ki ID claims se hasil karein
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userIdClaim))
+                return RedirectToAction("Login", "home");
+
+            int userId = int.Parse(userIdClaim);
+
+            // Check karein kahin user pehle se enroll toh nahi? (Double safety)
+            bool alreadyEnrolled = db.Enrollments.Any(e => e.CourseId == CourseId && e.UserId == userId);
+
+            if (!alreadyEnrolled)
+            {
+                var enrollment = new Enrollment
+                {
+                    UserId = userId,
+                    CourseId = CourseId,
+                    EnrollDate = DateTime.Now,
+                    Status = "Paid"
+                };
+
+                db.Enrollments.Add(enrollment);
+                await db.SaveChangesAsync();
+            }
+
+            return RedirectToAction("MyCourses");
+        }
+        public IActionResult Watch(int id)
+        {
+            // 1. User Login Check
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null) return RedirectToAction("Login", "home");
+
+            int userId = int.Parse(userIdClaim);
+
+            // 2. Enrollment Check
+            var isEnrolled = db.Enrollments.Any(e => e.CourseId == id && e.UserId == userId);
+            if (!isEnrolled)
+            {
+                return RedirectToAction("detail", "home", new { id = id });
+            }
+
+            // 3. Perfect Filtered Query
+            var course = db.Courses
+                .Include(c => c.Instructor)
+                .Include(c => c.Sections.Where(s => s.CourseId == id)) // <-- Yeh sirf is course ke sections layega
+                    .ThenInclude(s => s.Lessons)
+                        
+                .FirstOrDefault(c => c.CourseId == id);
+
+            if (course == null) return NotFound();
+
             return View(course);
         }
     }

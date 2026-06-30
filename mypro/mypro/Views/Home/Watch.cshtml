@@ -1,0 +1,166 @@
+﻿@model mypro.Models.Course
+
+@{
+    Layout = "_Layout";
+    var firstLesson = Model.Sections.OrderBy(s => s.SortOrder ?? s.SectionId)
+                           .SelectMany(s => s.Lessons)
+                           .FirstOrDefault();
+}
+
+@functions {
+    public string GetEmbedUrl(string url)
+    {
+        if (string.IsNullOrEmpty(url)) return "";
+        if (url.Contains("embed/")) return url;
+        string videoId = "";
+        if (url.Contains("v="))
+        {
+            videoId = url.Split("v=").Last().Split('&')[0];
+        }
+        else if (url.Contains("youtu.be/"))
+        {
+            videoId = url.Split("youtu.be/").Last().Split('?')[0];
+        }
+        return $"https://www.youtube.com/embed/{videoId}";
+    }
+}
+
+@* Aapki CSS ki `--theme-cream` background class use ho rahi hai *@
+<div class="container-fluid p-0" style="margin-top: 80px; background-color: var(--theme-cream);">
+    <div class="row g-0 shadow-lg">
+
+        <div class="col-lg-9 bg-white border-end">
+            @* Video Player Area *@
+            <div class="video-container" style="background-color: #000; position: relative;">
+                @if (firstLesson != null && !string.IsNullOrEmpty(firstLesson.ContentUrl))
+                {
+                    <iframe id="mainVideo" class="w-100" style="height: 70vh;"
+                            src="@GetEmbedUrl(firstLesson.ContentUrl)"
+                            frameborder="0" allowfullscreen></iframe>
+                }
+                else
+                {
+                    <div class="w-100 p-5 text-center" style="height: 70vh; display: flex; align-items: center; justify-content: center;">
+                        <div class="text-muted">
+                            <i class="bi bi-play-btn display-1"></i>
+                            <p class="mt-3">No video content available for this course.</p>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="fw-bold unbounded" id="currentLessonTitle" style="color: var(--theme-dark-brown);">
+                        @(firstLesson?.Title ?? Model.Title)
+                    </h2>
+                    <div class="d-flex gap-2">
+                        @* Using your theme button style *@
+                        <button class="btn hero-search-btn py-2 px-4 shadow-sm" style="font-size: 0.9rem;">
+                            <i class="bi bi-check2-circle me-1"></i> Mark Complete
+                        </button>
+                    </div>
+                </div>
+
+                <div class="instructor-info mb-3">
+                    <span class="badge" style="background-color: var(--theme-light-brown);">Course</span>
+                    <span class="ms-2">By <strong>@(Model.Instructor?.FullName ?? "Expert")</strong></span>
+                </div>
+
+                <hr style="border-color: var(--theme-light-brown); opacity: 0.2;">
+
+                <h5 class="fw-bold mb-3" style="color: var(--theme-brown);">Description</h5>
+                <p class="text-secondary" style="line-height: 1.8;">@Model.Description</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 bg-white h-100 overflow-auto" style="max-height: 90vh; border-left: 1px solid #eee;">
+            <div class="p-3 sticky-top" style="background-color: var(--theme-brown); color: white;">
+                <h6 class="fw-bold mb-0 unbounded" style="font-size: 0.9rem;">Course Content</h6>
+            </div>
+
+            <div class="accordion accordion-flush" id="curriculumAccordion">
+                @foreach (var sectio in Model.Sections.OrderBy(s => s.SortOrder ?? s.SectionId))
+                {
+                    <div class="accordion-item border-bottom">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#sec_@sectio.SectionId"
+                                    style="color: var(--theme-dark-brown); font-size: 0.9rem;">
+                                @sectio.Title
+                            </button>
+                        </h2>
+                        <div id="sec_@sectio.SectionId" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+                            <div class="accordion-body p-0">
+                                <ul class="list-group list-group-flush">
+                                    @foreach (var lesson in sectio.Lessons.OrderBy(l => l.LessonId))
+                                    {
+                                        <li class="list-group-item list-group-item-action border-0 py-3 d-flex align-items-center lesson-row"
+                                            onclick="changeVideo('@GetEmbedUrl(lesson.ContentUrl)', '@lesson.Title', this)"
+                                            style="cursor: pointer; transition: all 0.3s; padding-left: 20px;">
+                                            <i class="bi bi-play-circle-fill me-3" style="color: var(--theme-light-brown); font-size: 1.2rem;"></i>
+                                            <span class="small fw-medium text-dark">@lesson.Title</span>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Custom modifications to match your style.css variables */
+    .lesson-row:hover {
+        background-color: var(--theme-cream) !important;
+    }
+
+    .lesson-row.active-video {
+        background-color: var(--theme-cream) !important;
+        border-left: 4px solid var(--theme-brown) !important;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: var(--theme-cream) !important;
+        color: var(--theme-brown) !important;
+        box-shadow: none;
+    }
+
+    /* Scrollbar style to match brown theme */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--theme-light-brown);
+        border-radius: 10px;
+    }
+</style>
+
+<script>
+    function changeVideo(videoUrl, title, element) {
+        const iframe = document.getElementById('mainVideo');
+        if (iframe) {
+            iframe.src = videoUrl + "?autoplay=1";
+        }
+
+        document.getElementById('currentLessonTitle').innerText = title;
+
+        document.querySelectorAll('.lesson-row').forEach(item => {
+            item.classList.remove('active-video');
+        });
+        element.classList.add('active-video');
+
+        if (window.innerWidth < 992) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const first = document.querySelector('.lesson-row');
+        if (first) first.classList.add('active-video');
+    });
+</script>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\mypro.csproj": {}
+    "C:\\Users\\Lenovo\\Desktop\\elarning\\mypro\\mypro\\mypro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\mypro.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\elarning\\mypro\\mypro\\mypro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\mypro.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\elarning\\mypro\\mypro\\mypro.csproj",
         "projectName": "mypro",
-        "projectPath": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\mypro.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\elarning\\mypro\\mypro\\mypro.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Desktop\\mypro\\mypro\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\elarning\\mypro\\mypro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,0 +1,20 @@
+﻿@* PaymentForm.cshtml *@
+<div class="container py-5 text-center">
+    <div class="card bg-dark text-white p-5 rounded-4 shadow mx-auto" style="max-width: 500px; border: 1px solid #333;">
+        <h3 class="mb-4">Complete Your Payment</h3>
+        <p class="text-white-50">You are enrolling in Course ID: @ViewBag.CourseId</p>
+
+        <form asp-action="CompletePayment" method="post">
+            <input type="hidden" name="CourseId" value="@ViewBag.CourseId" />
+
+            <div class="mb-3 text-start">
+                <label class="form-label small">Card Number</label>
+                <input type="text" class="form-control bg-secondary text-white border-0" placeholder="0000 0000 0000 0000">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 rounded-pill fw-bold py-3">
+                Pay Now & Start Learning
+            </button>
+        </form>
+    </div>
+</div>

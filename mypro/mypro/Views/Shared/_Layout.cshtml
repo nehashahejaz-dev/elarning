@@ -17,43 +17,59 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top animate__animated animate__fadeInDown">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="bi bi-mortarboard-fill me-2"></i>E-Learn
+            <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
+                <i class="bi bi-mortarboard-fill me-2 text-primary"></i>E-Learn
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav me-auto">
-                    <a class="nav-link active" href="index.html">Home</a>
-                    <a class="nav-link" href="enrolled-courses.html">My Learning</a>
-                    <a class="nav-link" href="video-player.html">All Courses</a>
-                    <a class="nav-link" href="resources.html">Resources</a>
-                </div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-info" asp-controller="home" asp-action="MyCourses">
+                                <i class="bi bi-play-btn-fill me-1"></i> My Learning
+                            </a>
+                        </li>
+                    }
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="home" asp-action="course">All Courses</a>
+                    </li>
+                </ul>
+
                 <div class="d-flex gap-2 align-items-center">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <span class="text-white me-2 fw-bold">
-                            <i class="bi bi-person-circle me-1"></i> @User.Identity.Name
-                        </span>
-
-                        <a asp-controller="home" asp-action="Logout" class="btn btn-outline-light rounded-pill px-3"
-                           style="min-width: auto; min-height: auto; padding: 5px 15px;">
-                            <i class="bi bi-box-arrow-right me-1"></i> Logout
-                        </a>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-person-circle me-1"></i> @User.Identity.Name
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+                                <li><a class="dropdown-item" asp-controller="Enrollment" asp-action="MyCourses">My Courses</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a asp-controller="home" asp-action="Logout" class="dropdown-item text-danger">
+                                        <i class="bi bi-box-arrow-right me-1"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     }
                     else
                     {
-                        <a asp-action="login" class="btn btn-outline-light rounded-pill px-4"
-                           style="min-width: auto; min-height: auto; padding: 8px 20px;">
-                            Sign In
-                        </a>
-                        <a asp-action="register" class="btn btn-light rounded-pill px-4 text-dark fw-bold"
-                           style="min-width: auto; min-height: auto; padding: 8px 20px;">
-                            Join Free
-                        </a>
+                        <a asp-controller="home" asp-action="Login" class="btn btn-outline-light rounded-pill px-4">Sign In</a>
+                        <a asp-controller="home" asp-action="Register" class="btn btn-light rounded-pill px-4 text-dark fw-bold">Join Free</a>
                     }
                 </div>
+            </div>
+        </div>
     </nav>
             @RenderBody()
     <footer class="footer-modern">
